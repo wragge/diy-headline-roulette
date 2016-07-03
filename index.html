@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Headline Roulette</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="js/showLoading/css/showLoading.css" rel="stylesheet">
+    <link href="css/local.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Headline roulette <small id="tagline"></small></h1>
+      <div class="row">
+        <div class="col-md-5">
+          <div id="article" class="well well-small">
+            <p id='headline'></p>
+            <p id='summary'></p>
+            <p id='paper'></p>
+            <div id='pub_details'>
+              <p id="date"></p>
+              <div id='article-link'></div>
+            </div>
+          </div>
+        </div>
+
+        <div id='guess' class="col-md-5">
+          <p class="lead">
+            Can you guess when this newspaper article was published?
+          </p>
+
+              <div class="row">
+              <div class="col-xs-5 col-md-5">
+                <input placeholder="YEAR" id='year' type="text" maxlength="4" class="input-lg form-control">
+              </div>
+              <div class="col-xs-7 col-md-7">
+              <button id='guess-button' class="btn btn-primary btn-lg">Guess</button>
+              <button id='reload-button' class="btn btn-lg">Reload</button>
+              </div>
+              </div>
+
+          <p class='text-info' id="status">
+            
+          </p>
+        </div>
+        <div class="col-md-2">
+          <div id='count' class="border-ok">
+              <p id='guesses'>10</p>
+              <p id='text-guesses' class="status-ok">guesses left</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="row">
+          <div class="col-md-12 border-top">
+            <p><a class="pull-right" href="http://help.nla.gov.au/trove/building-with-trove/api"><img src="img/API-light.png"></a></p>
+            <p class="text-muted"><small id="byline"></small></p>
+            <p class="text-muted"><small>
+              Make your own version of Headline Roulette.
+            </small></p>
+            <p class="text-muted"><small>
+              <a href="http://bootswatch.com/readable/">Readable</a> theme for Bootstrap provided by <a href="http://bootswatch.com/">Bootswatch</a>.
+            </small></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/showLoading/js/jquery.showLoading.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

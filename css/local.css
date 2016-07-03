@@ -1,0 +1,31 @@
+#article { min-height: 200px;}
+#headline { font-weight: bold;}
+#paper { font-style: italic;}
+#count {
+    text-align:center;
+    -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+      }
+#count p {margin: 0;}
+#guesses {font-size: 400%; line-height: 200%;}
+#text-guesses {
+                width: 100%;
+                color: #ffffff;
+                padding: 10px 0 10px 0;
+                font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size: 120%;
+            }
+.label {padding: 10px;}
+#status { margin-top: 22px;}
+#year { font-size: 200%; padding: 20px;}
+.status-ok { background: #3fad46;}
+.status-warning { background: #f0ad4e;}
+.status-danger { background: #d9534f; }
+.border-ok { border: 1px solid #3fad46;}
+.border-warning {  border: 1px solid #f0ad4e; }
+.border-danger { border: 1px solid #d9534f; }
+.border-top { border-top: 1px solid #999; padding-top: 10px;}
+footer { margin-top: 20px;}
+footer p {margin: 0;}
+h1 { margin-bottom: 40px; }
