@@ -99,7 +99,7 @@ I created a Canberra edition of Headline Roulette that sets `keywords` to 'Canbe
 
     // YOU MUST EDIT THIS SECTION
     // You must supply a Trove API key
-    var troveAPIKey = 'lb676h2eqpsrtkrc';
+    var troveAPIKey = '############';
     // Either provide full API query here or include options below
     var apiQuery = '';
     // Words you want to search for -- separate multiple values with spaces, eg:
