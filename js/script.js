@@ -74,7 +74,7 @@ $(function(){
                     q = words.join('+AND+');
                 }
             } else {
-                q = '%20';
+                q = '+';
             }
             query += '&q=' + q;
             if (titles !== '') {

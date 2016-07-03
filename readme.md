@@ -1,14 +1,14 @@
 # DIY Trove Headline Roulette
 
-Headline Roulette is a simple game that challenges you to guess the publication date of a newspaper article chosen at random from Trove.
+[Headline Roulette](http://wraggelabs.com/shed/headline-roulette/) is a simple game that challenges you to guess the publication date of a newspaper article chosen at random from [Trove](http://trove.nla.gov.au).
 
 Here you can build your own customised version of Headline Roulette with nothing more than a GitHub account.
 
 For example, you might to create a version of Headline Roulette limited to articles:
 
-* that mention *cats* or *kittens*
+* that mention **cats** or **kittens**
 * that include the phrase "White Australia"
-* that come from the Melbourne **Age**
+* that come from the Melbourne *Age*
 * that come from your local region
 
 It's up to you. Build a version for your workshop, class, or community. Build a version just for fun. Any search you can construct in Trove you can use to seed your game. 
@@ -24,7 +24,7 @@ It's up to you. Build a version for your workshop, class, or community. Build a 
 6. Click on the pencil icon to edit the file.
 7. Look for the **'YOU MUST EDIT THIS SECTION'** message in the `script.js` file and add the details of your game as described in the [customisation section](#customisation-guide) below.
 8. Click on the 'Commit changes' button to save your details.
-9. That's it! Your hew game will be available at the address -- http://**[your Github user name]**.github.io/**[your repository name]**. For example, my user account is 'wragge' and I created a version of this repository called 'forecasters-demo', so you can find it online at http://wragge.github.io/forecasters-demo/ .
+9. That's it! Your hew game will be available at the address -- http://**[your Github user name]**.github.io/**[your repository name]**. For example, my user account is 'wragge' and I created a version of this repository called 'canberra-headline-roulette', so you can find it online at [http://wragge.github.io/canberra-headline-roulette/](http://wragge.github.io/canberra-headline-roulette/).
 
 ## Customisation guide
 
@@ -92,6 +92,35 @@ http://trove.nla.gov.au/newspaper/title/11
 ```
 
 So the id number of the *Canberra Times* is '11'.
+
+I created a Canberra edition of Headline Roulette that sets `keywords` to 'Canberra' and includes the id for the *Canberra Times* in `titles`. Here's the config section:
+
+``` javascript
+
+    // YOU MUST EDIT THIS SECTION
+    // You must supply a Trove API key
+    var troveAPIKey = 'lb676h2eqpsrtkrc';
+    // Either provide full API query here or include options below
+    var apiQuery = '';
+    // Words you want to search for -- separate multiple values with spaces, eg:
+    // var keywords = 'weather wragge';
+    var keywords = 'Canberra';
+    // How you want to combine keywords -- all, any, or phrase
+    var keywordType = 'all'
+    // Newspaper id numbers -- separate multiple values with spaces, eg:
+    // var titles = '840 35';
+    var titles = '11';
+    // Add a byline, eg:
+    var byline = 'Created by <a href="https://timsherratt.org">Tim Sherratt</a>.'
+    // var byline = '';
+    // Add a tagline
+    var tagline = 'How well do you know your ACT history?';
+    // Leave this alone unless you're publishing on a non-https server
+    var useHttps = 'true';
+
+```
+
+You can [try it out here](https://wragge.github.io/canberra-headline-roulette/).
 
 Note that if you *do* supply an API query, other settings will be ignored. The easiest way to construct an API query is to use the [Trove API console](https://troveconsole.herokuapp.com/).
 
