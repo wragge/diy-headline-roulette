@@ -105,15 +105,20 @@ $(function(){
         }
     }
     function get_api_result(query, type) {
-        $.ajax({
+        return $.ajax({
             "dataType": "jsonp",
             "url": query,
-            "success": function(results) {
-                process_results(results, type);
-            },
-            error: function(xmlReq, txtStatus, errThrown){
-                $('#status').text(xmlReq.responseText);
-            }
+            "timeout": 10000
+        })
+        .retry({times: 5, timeout: 1000})
+        .done(function(results) {
+            console.log('Success!');
+            process_results(results, type);
+        })
+        .fail(function(xmlReq, txtStatus, errThrown){
+            console.log(txtStatus);
+            $("#article").hideLoading();
+            $("#headline").text("Oh no! Something went wrong... Click 'Reload' to try again.");
         });
     }
     function process_results(results, type) {
