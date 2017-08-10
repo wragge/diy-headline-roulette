@@ -11,6 +11,12 @@ $(function(){
     var keywords = '';
     // How you want to combine keywords -- all, any, or phrase
     var keywordType = 'all'
+    // Limit to a particular year
+    // This was added on 10 August 2017 because one of the people who
+    // attended my talk to ACT teacher librarians asked if it was possible to
+    // have a version that always gave a particular year as an answer. I think it
+    // was for a treasure hunt type thing.
+    var year = '';
     // Newspaper id numbers -- separate multiple values with spaces, eg:
     // var titles = '840 35';
     var titles = '';
@@ -81,6 +87,9 @@ $(function(){
                 $.each(titles.split(' '), function(index, title) {
                     query += '&l-title=' + title;
                 });
+            }
+            if (year !== '') {
+                query += '&l-year=' + year;
             }
         }
         return query
